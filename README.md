@@ -12,7 +12,9 @@ Currently, two official plugins are available:
 
 -Create a React App
 -Configured TailwindCSS
--
+-Header
+-Login Form
+-Sign Up Form
 
 
 # Features
