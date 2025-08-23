@@ -8,13 +8,35 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-# Netflix-GPT
+# Videoflix-GPT
 
 -Create a React App
 -Configured TailwindCSS
 -Header
 -Login Form
 -Sign Up Form
+-Form Validation
+-useRef Hook
+-FireBase Setup
+-Deploying our app to Firebase 
+-Create Sign Up User Account
+-Implement Sign In user API
+-Created Redux Store with userSlice
+-Implemented Sign out
+-Updated profile
+-Bugfix: Sign up user displayName and profile picture update
+-Bugfix: If user is not logged in Redirect/ browse to Login page and vice-versa
+-Unsubscribed to the onAuthStateChange callback
+-Register TMDB API & create an app & get access token
+-Get data from TMDB now playing movies List
+-Custom Hook for now playing movies
+-Create MovieSlice
+-Updated store with movies data
+-planning for Main and secondary container
+-Fetch data for trailer video
+-update store with trailer video data
+-embedded the youtube video and make it autoplay & mute
+-tailwind classes to make main container look awesome
 
 
 # Features
@@ -28,6 +50,6 @@ Currently, two official plugins are available:
         -Title and deescription
         -Movie suggestions
             -Movie lists * N 
--Netflix GPT
+-Videoflix GPT
     -Search Bar
     -Movie suggestions
