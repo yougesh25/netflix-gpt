@@ -7,9 +7,10 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import background from "../assets/background_2.jpeg";
+import background from "../assets/background_2.png";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { PhotoURL } from "../utils/constants";
 
 const Login = () => {
   const [signInForm, setSignInForm] = useState(true);
@@ -45,7 +46,7 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value,
             photoURL:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAFGIz7pEYMHqzwt2kHGRn9wjPSq0gJPhb1w&s",
+              PhotoURL,
           })
             .then(() => {
               // Profile updated!
@@ -99,7 +100,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          className="w-screen h-screen bg-cover bg-center bg-no-repeat"
+          className="w-screen h-screen bg-cover bg-center bg-no-repeat brightness-80"
           src={background}
           alt="logo"
         ></img>
@@ -110,7 +111,7 @@ const Login = () => {
       ></div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-3/12 absolute my-36 p-10   mx-auto right-0 left-0 text-white rounded-lg bg-black/75"
+        className="w-3/12 absolute my-36 p-10   mx-auto right-0 left-0 text-white rounded-lg bg-black/90"
       >
         <div className="mx-2">
           <h1 className="font-bold text-3xl py-4">

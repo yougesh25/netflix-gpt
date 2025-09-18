@@ -1,19 +1,19 @@
 import { useEffect } from "react";
-import { addNowPlayingMovies } from "../utils/moviesSlice";
+import { addUpcomingMovies } from "../utils/moviesSlice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { API_OPTIONS, NOW_PLAYING_MOVIES_URL } from "../utils/constants";
+import { API_OPTIONS, UPCOMING_MOVIES_URL } from "../utils/constants";
 
-const useGetNowPlayingMovies = () => {
+const useUpcomingMovies = () => {
   const dispatch = useDispatch();
-  const getNowPlayingMovies = async () => {
+  const getUpcomingMovies = async () => {
     try {
       const data = await axios(
-        NOW_PLAYING_MOVIES_URL,
+        UPCOMING_MOVIES_URL,
         API_OPTIONS
       );
       console.log("data is :", data);
-      dispatch(addNowPlayingMovies(data.data.results));
+      dispatch(addUpcomingMovies(data.data.results));
     } catch (err) {
       console.error("erro in fetching api", err);
     }
@@ -21,9 +21,9 @@ const useGetNowPlayingMovies = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    getNowPlayingMovies();
+    getUpcomingMovies();
     return () => controller.abort();
   }, []);
 };
 
-export default useGetNowPlayingMovies;
+export default useUpcomingMovies;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import videoFlixLogo from "../assets/video_flix_logo_3.jpeg";
+import videoFlixLogo from "../assets/video_flix_logo_1.png";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <div className="absolute w-screen px-8 py-2 z-10 flex justify-between">
       <img
-        className="w-40 h-30 top-0  rounded-3xl bg-white bg-opacity-80 p-1 shadow-md"
+        className="w-40 h-25 top-0  rounded-3xl bg-white bg-opacity-80 p-1 shadow-md"
         src={videoFlixLogo}
         alt="logo"
       ></img>
